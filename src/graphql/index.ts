@@ -9,7 +9,9 @@ import { resolvers } from './resolvers';
 
 export const  initServer = async()=>{
     const app = express();
-    app.use(cors());
+    app.use(cors({
+        origin: 'http://localhost:3000',
+    }));
     app.use(bodyParser.json());
     const graphqlServer = new ApolloServer({ typeDefs, resolvers })
     await graphqlServer.start()
