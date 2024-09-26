@@ -10,8 +10,10 @@ import { resolvers } from './resolvers';
 export const  initServer = async()=>{
     const app = express();
     app.use(cors({
-        origin: "*",
-    }));
+  
+        origin:"https://taskmanagerfrontend-phi.vercel.app",
+        credentials:true,
+      }))
     app.use(bodyParser.json());
     const graphqlServer = new ApolloServer({ typeDefs, resolvers })
     await graphqlServer.start()
