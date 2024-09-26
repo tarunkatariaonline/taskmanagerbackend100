@@ -13,6 +13,7 @@ export const  initServer = async()=>{
   
         origin:"https://taskmanagerfrontend-phi.vercel.app",
         methods: 'GET,POST,PUT,DELETE',
+        credentials:true
     
       }))
     app.use(bodyParser.json());
