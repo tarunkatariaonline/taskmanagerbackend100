@@ -11,8 +11,9 @@ export const  initServer = async()=>{
     const app = express();
     app.use(cors({
   
-        origin:"https://taskmanagerfrontend-phi.vercel.app",
-        credentials:true,
+        origin:"*",
+        methods: 'GET,POST,PUT,DELETE',
+    
       }))
     app.use(bodyParser.json());
     const graphqlServer = new ApolloServer({ typeDefs, resolvers })
