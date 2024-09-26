@@ -11,7 +11,7 @@ export const  initServer = async()=>{
     const app = express();
     app.use(cors({
   
-        origin:"*",
+        origin:"https://taskmanagerfrontend-phi.vercel.app",
         methods: 'GET,POST,PUT,DELETE',
     
       }))
