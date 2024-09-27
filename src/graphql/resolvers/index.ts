@@ -14,12 +14,3 @@ export const resolvers = {
 };
 
 
-export const  initServer = async()=>{
-    const app = express();
-    app.use(cors());
-    app.use(bodyParser.json());
-    const graphqlServer = new ApolloServer({ typeDefs, resolvers })
-    await graphqlServer.start()
-    app.use('/graphql', expressMiddleware(graphqlServer));
-    return app;
-}

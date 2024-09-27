@@ -1,4 +1,4 @@
-import { initServer } from "./graphql/index";
+import { initServer } from "../src/app/index";
 import { Request,Response } from "express";
 async function init(){
     const app = await initServer()
