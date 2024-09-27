@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const index_1 = require("../src/app/index");
+const index_1 = require("./app/index");
 async function init() {
     const app = await (0, index_1.initServer)();
     const PORT = process.env.PORT || 8000;

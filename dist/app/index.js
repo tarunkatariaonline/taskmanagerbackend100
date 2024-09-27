@@ -13,7 +13,7 @@ const express_1 = __importDefault(require("express"));
 const initServer = async () => {
     const app = (0, express_1.default)();
     app.use((0, cors_1.default)({
-        origin: "https://taskmanagerfrontend-phi.vercel.app",
+        origin: "*",
         methods: 'GET,POST,PUT,DELETE',
         credentials: true
     }));

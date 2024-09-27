@@ -1,4 +1,4 @@
-import { initServer } from "../src/app/index";
+import {initServer} from './app/index'
 import { Request,Response } from "express";
 async function init(){
     const app = await initServer()
